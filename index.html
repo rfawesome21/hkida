@@ -9,29 +9,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10% 5%;
+            padding: 8% 5%;
             font-family: Arial, sans-serif;
             text-align: center;
         }
         img {
-            max-width: 500px;
+            width: 100%;
             height: auto;
+            max-width: 500px; /* Ensures it stays at 500px max on larger screens */
         }
         h1 {
-            font-size: 24px;
-            margin-top: 20px;
+            font-size: 22px;
+            margin-top: 15px;
         }
         .links-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
             max-width: 800px;
             gap: 10px;
         }
         a {
             flex: 1;
+            min-width: 250px;
             text-align: center;
             padding: 15px;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
             color: black;
             border-radius: 10px;
@@ -42,9 +46,9 @@
         a:hover {
             background-color: #e0e0e0;
         }
-        @media (max-width: 1024px) {
-            .links-container {
-                flex-direction: column;
+        @media (min-width: 1024px) {
+            img {
+                width: 500px; /* Locks image width to 500px on larger screens */
             }
         }
     </style>
